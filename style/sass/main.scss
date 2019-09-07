@@ -1,0 +1,58 @@
+@import "vars";
+@import "components";
+
+body{
+  margin:0;padding: 0;
+}
+.load-svg{
+
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  -moz-transform: translate(-50%, -50%) rotate(0deg);
+  -ms-transform: translate(-50%, -50%) rotate(0deg);
+  -o-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation-name: loading-circle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transform-origin: center;
+  display: none;
+
+
+}
+
+@keyframes loading-circle {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    -o-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }  }
+
+body{
+  background: $background-color;
+}
+
+header{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: $padding-main-panel - 10px;
+  text-align: center;
+  font-family: $font-family;
+  font-size: 24px;
+  background: white;
+  p{
+    font-family: $font-family;
+    font-size: 14px;
+  }
+}

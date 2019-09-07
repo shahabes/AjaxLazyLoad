@@ -1,0 +1,84 @@
+
+.#{$main-author-prefix}-data{
+  & .#{$main-author-prefix}-panel{
+    //display: none;
+
+    margin:$margin-main-panel;
+    background: $panel-background;
+    padding: $padding-main-panel;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+    font-family: $font-family;
+    transform: translateY(60px);
+    opacity: 0;
+    animation-name: load-panel;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    animation-duration: .5s;
+    p{
+      padding-left: 10px;
+      color: #434343;
+    }
+    
+    a{
+      padding: 10px;
+      -webkit-border-radius: $border-radius;
+      -moz-border-radius: $border-radius;
+      border-radius: $border-radius;
+      border: $panel-border-width solid $panel-border-color;
+      background: $main-author-prefix-btn-background;
+      text-decoration: none;
+      color: black;
+      display: block;
+      text-align: center;
+      margin: 0 40px;
+      -webkit-transition: all ease .5s;
+      -moz-transition: all ease .5s;
+      -ms-transition: all ease .5s;
+      -o-transition: all ease .5s;
+      transition: all ease .5s;
+      &:hover{
+        background: darken($main-author-prefix-btn-background,10%);
+      }
+    }
+  }
+
+}
+
+
+@keyframes load-panel {
+from {
+  transform: translateY(60px);
+  opacity: 0;
+}
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+
+  }
+}
+
+.shs-load-more-btn{
+  p{
+    margin: $margin-main-panel;
+    background: white;
+    padding: 10px;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+    text-align: center;
+    font-family: $font-family;
+    cursor: pointer;
+    border: $panel-border-width solid $panel-border-color;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+    &:hover{
+      background: darken($main-author-prefix-btn-background,10%);
+    }
+  }
+}
